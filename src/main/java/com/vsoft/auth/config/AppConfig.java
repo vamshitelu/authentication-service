@@ -31,4 +31,5 @@ public class AppConfig {
     public AuthenticationManager authenticationManagerBean(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
     }
+
 }

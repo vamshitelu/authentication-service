@@ -2,7 +2,9 @@ package com.vsoft.auth.controller;
 
 import com.vsoft.auth.model.JwtRequest;
 import com.vsoft.auth.model.JwtResponse;
+import com.vsoft.auth.model.User;
 import com.vsoft.auth.security.JwtHelper;
+import com.vsoft.auth.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +23,7 @@ import static java.util.stream.Collectors.toList;
 public class AuthenticationController {
 
     @Autowired
-    private UserDetailsService userDetailsService;
+    private CustomUserDetailsService userDetailsService;
 
     @Autowired
     private AuthenticationManager authenticationManager;
